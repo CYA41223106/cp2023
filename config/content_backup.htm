@@ -642,7 +642,42 @@ return 1;
 <h1>W13</h1>
 <p>今天的課程內容繼上次做了建立第13週的github鑰匙，跟著老師一步一步做，慢慢進步，從以前還要慢慢設定網路，到現在只要插上隨身碟就可以執行管理員使用網路了，還可以做編輯以及提交，希望下次能學得更多。</p>
 <h1>ANSIC</h1>
-<h2>8.</h2>
+<h2>9.</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main() {
+    int i, j, flag, ip = 0;
+
+    // Print a message indicating the purpose of the program
+    printf("The prime numbers between 1 and 199 are:\n");
+
+    // Loop to check prime numbers from 2 to 198
+    for (i = 2; i &lt; 199; i++) {
+        flag = 1;
+
+        // Loop to check if i is divisible by any number other than 1 and itself
+        for (j = 2; j &lt;= i / 2 &amp;&amp; flag == 1; j++) {
+            if (i % j == 0) {
+                flag = 0;
+            }
+        }
+
+        // If i is prime, print it
+        if (flag == 1) {
+            printf("%5d ", i);
+            ip++;
+
+            // Print a newline character after every 10 prime numbers
+            if (ip % 10 == 0) {
+                printf("\n");
+            }
+        }
+    }
+
+    printf("\n");
+
+    return 0;
+}</pre>
+<p><img alt="" height="110" src="/images/9.c.png" width="400"/></p><h2>8.</h2>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 int main() {
     // Define an enumeration type 'week'
