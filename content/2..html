@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='w1.html'>w1</a><li><a href='w2.html'>w2</a><li><a href='w4.html'>w4</a><li><a href='w5.html'>w5</a><li><a href='w6.html'>w6</a><li><a href='W8.html'>W8</a><li><a href='W11.html'>W11</a><li><a href='w12.html'>w12</a><li><a href='W13.html'>W13</a><li class='has-children'><a href='ANSIC.html'>ANSIC</a><ul class='dropdown'><li><a href='1.-1.html'>1.-1</a><li><a href='1.-2.html'>1.-2</a></li></ul><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='w1.html'>w1</a><li><a href='w2.html'>w2</a><li><a href='w4.html'>w4</a><li><a href='w5.html'>w5</a><li><a href='w6.html'>w6</a><li><a href='W8.html'>W8</a><li><a href='W11.html'>W11</a><li><a href='w12.html'>w12</a><li><a href='W13.html'>W13</a><li class='has-children'><a href='ANSIC.html'>ANSIC</a><ul class='dropdown'><li><a href='2..html'>2.</a><li><a href='1..html'>1.</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,24 +142,25 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">ANSIC << <a href='ANSIC.html'>Previous</a> <a href='1.-2.html'>Next</a> >> 1.-2<br /><h1>1.-1</h1>
+    <div id="tipue_search_content">ANSIC << <a href='ANSIC.html'>Previous</a> <a href='1..html'>Next</a> >> 1.<br /><h1>2.</h1>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
-int main()
-{
-// Print Name
-printf("Name :陳怡安\n");
+int main(int argc, char** argv) {
+    // Check for C standard version
+    #if __STDC_VERSION__ &gt;=  201710L
+        printf("We are using C18!\n");
+    #elif __STDC_VERSION__ &gt;= 201112L
+        printf("We are using C11!\n");
+    #elif __STDC_VERSION__ &gt;= 199901L
+        printf("We are using C99!\n");
+    #else
+        printf("We are using C89/C90!\n");
+    #endif
 
-// Print Date of Birth
-printf("DOB : August 18, 2005\n");
-
-// Print Mobile Number
-printf("Mobile : 09-67255656\n");
-
-// Indicate successful execution
-return(0);
+    // Indicate successful execution
+    return 0;
 }</pre>
-<p><img alt="" height="200" src="./../images/1.c.png" width="437"/></p><br />ANSIC << <a href='ANSIC.html'>Previous</a> <a href='1.-2.html'>Next</a> >> 1.-2</div>
+<br />ANSIC << <a href='ANSIC.html'>Previous</a> <a href='1..html'>Next</a> >> 1.</div>
         
     <!-- footer -->
       <div class="container">
